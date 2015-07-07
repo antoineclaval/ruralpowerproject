@@ -110,7 +110,7 @@ class Common(Configuration):
 
     # DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-    DATABASES = values.DatabaseURLValue('postgres://localhost/ruralpowerproject')
+    DATABASES = values.DatabaseURLValue('postgres://ruralpower_pg_user:ruralpower_pg_user@localhost:5432/ruralpowerproject')
     # END DATABASE CONFIGURATION
 
     # CACHING
@@ -130,7 +130,7 @@ class Common(Configuration):
     # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
     # although not all choices may be available on all operating systems.
     # In a Windows environment this must be set to your system time zone.
-    TIME_ZONE = 'UTC-06:00'
+    TIME_ZONE = 'America/New_York'
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
     LANGUAGE_CODE = 'en-us'

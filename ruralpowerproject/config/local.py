@@ -31,6 +31,9 @@ class Local(Common):
     MIDDLEWARE_CLASSES = Common.MIDDLEWARE_CLASSES + ('debug_toolbar.middleware.DebugToolbarMiddleware',)
     INSTALLED_APPS += ('debug_toolbar', 'django_extensions',)
 
+    # A tuple of IP addresses, as strings, that:
+    # - See debug comments, when DEBUG is True
+    # - Receive X headers in admindocs if the XViewMiddleware is installed (see The Django admin documentation generator)
     INTERNAL_IPS = ('127.0.0.1', '10.0.2.2',)
 
     DEBUG_TOOLBAR_CONFIG = {

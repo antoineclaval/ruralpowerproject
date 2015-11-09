@@ -32,3 +32,5 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+#map { position:absolute; top:60px; bottom:0; width:80%; height: 90%;}

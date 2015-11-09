@@ -6,6 +6,10 @@ from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
+from djgeojson.views import GeoJSONLayerView
+
+from stateInfo.models import State, County
+
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -14,10 +18,11 @@ urlpatterns = patterns('',
     url(r'^$',  # noqa
         TemplateView.as_view(template_name='pages/home.html'),
         name="home"),
-    url(r'^about/$',
-        TemplateView.as_view(template_name='pages/about.html'),
-        name="about"),
-
+    url(r'^map/$',
+        TemplateView.as_view(template_name='pages/map.html'),
+        name="map"),
+    url(r'^state.geojson$', GeoJSONLayerView.as_view(model=State), name='state'),
+    url(r'^county.geojson$', GeoJSONLayerView.as_view(model=County), name='county'),
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 

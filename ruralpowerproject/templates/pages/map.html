@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block css %}
+    {{ block.super }}
+    <link href="https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css" rel="stylesheet" />
+{% endblock css %}
+
+{% block content %}
+  <div id='map'></div>
+{% endblock content %}
+
+{% block javascript %}
+    {{ block.super }}
+  <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+{% endblock javascript %}

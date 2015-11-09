@@ -2,10 +2,10 @@
 <html lang="en" ng-app>
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}ruralpowerproject{% endblock title %}</title>
+    <title>{% block title %}The rural power project{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="A civic examination of electric utilities cooperatives in the south">
+    <meta name="author" content="Antoine Claval">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -20,14 +20,15 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
     <!-- Your stuff: Third-party css libraries go here -->
+    
 
     <!-- This file store project specific CSS -->
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
     {% endblock %}
 
-    {% block angular %}
+    <!--{% block angular %}
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-    {% endblock %}
+    {% endblock %}-->
 
   </head>
 
@@ -35,10 +36,10 @@
 
     <div class="header navbar">
       <div class="container">
-        <a class="navbar-brand" href="/">ruralpowerproject</a>
+        <a class="navbar-brand" href="/">rural power project</a>
         <ul class="nav navbar-nav">
           <li class="active"><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'map' %}">Map</a></li>
 
           {% if request.user.is_authenticated %}
             <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
@@ -60,14 +61,14 @@
       {% endif %}
 
       {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
+        <p>Content for this template is empty</p>
       {% endblock content %}
 
     </div> <!-- /container -->
     
     {% block modal %}{% endblock modal %}
 
-    <!-- Le javascript
+    <!--  javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}

@@ -29,6 +29,7 @@ class Common(Configuration):
         'django.contrib.sites',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        'django.contrib.gis', 
 
         # Useful template tags:
         # 'django.contrib.humanize',
@@ -42,11 +43,13 @@ class Common(Configuration):
         'allauth',  # registration
         'allauth.account',  # registration
         'allauth.socialaccount',  # registration
+        'leaflet', #leaflet mapping integration
     )
 
     # Apps specific for this project go here.
     LOCAL_APPS = (
         'users',  # custom users app
+        'stateInfo',
         # Your stuff: custom apps go here
     )
 
@@ -110,7 +113,8 @@ class Common(Configuration):
 
     # DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-    DATABASES = values.DatabaseURLValue('postgres://ruralpower_pg_user:ruralpower_pg_user@localhost:5432/ruralpowerproject')
+    # For URL Schema, see : https://github.com/kennethreitz/dj-database-url
+    DATABASES = values.DatabaseURLValue('postgis://ruralpower_pg_user:ruralpower_pg_user@localhost:5433/ruralpowerproject')
     # END DATABASE CONFIGURATION
 
     # CACHING

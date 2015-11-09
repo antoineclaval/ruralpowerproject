@@ -1,5 +1,5 @@
 # Bleeding edge Django
-django==1.7.7
+django==1.7.9
 
 # Configuration
 django-configurations==0.8
@@ -36,3 +36,6 @@ django-avatar==2.0
 pytz==2014.10
 
 # Your custom requirements go here
+
+django-leaflet==0.16.0
+django-geojson==2.8.1

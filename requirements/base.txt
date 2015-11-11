@@ -39,3 +39,5 @@ pytz==2014.10
 
 django-leaflet==0.16.0
 django-geojson==2.8.1
+django-resized==0.3.4
+python-dateutil==2.4.1

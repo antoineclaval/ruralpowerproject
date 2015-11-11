@@ -6,6 +6,12 @@ __pycache__
 #ugly dev notes
 personalNotes
 
+#raw GIS data repo. It have to be somewhere
+rawShpData
+
+#.vagrant directory is created by vagrant up command, with the VagrantFile 
+.vagrant
+
 # Logs
 *.log
 pip-log.txt

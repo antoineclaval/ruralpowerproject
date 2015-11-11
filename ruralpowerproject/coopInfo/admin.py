@@ -1,5 +1,5 @@
 from django.contrib import admin
-from coopInfo.models import Cooperative , Person , State
+from coopInfo.models import Cooperative , Person
 
 class PersonAdmin(admin.ModelAdmin):
 	list_display = ('name', 'sex','ethnicity', 'coopId','title')
@@ -24,11 +24,6 @@ class CooperativeAdmin(admin.ModelAdmin):
 	    ('Documents', {'fields': ['bylaws', 'is990present']})
 	    ]
 
-#Customise Admin site 
-admin.site.site_header = 'Electric Coop Backoffice'
-admin.site.site_title = 'Electric Coop Backoffice'
-
 # Register your models here.
 admin.site.register(Cooperative, CooperativeAdmin)
 admin.site.register(Person, PersonAdmin)
-admin.site.register(State)

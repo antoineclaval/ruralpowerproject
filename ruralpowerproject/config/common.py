@@ -50,6 +50,7 @@ class Common(Configuration):
     LOCAL_APPS = (
         'users',  # custom users app
         'stateInfo',
+        'coopInfo'
         # Your stuff: custom apps go here
     )
 

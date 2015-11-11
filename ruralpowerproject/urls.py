@@ -18,9 +18,8 @@ urlpatterns = patterns('',
     url(r'^$',  # noqa
         TemplateView.as_view(template_name='pages/home.html'),
         name="home"),
-    url(r'^map/$',
-        TemplateView.as_view(template_name='pages/map.html'),
-        name="map"),
+    url(r'^map/$',TemplateView.as_view(template_name='pages/map.html'),name="map"),
+    url(r'^cooperatives/$',TemplateView.as_view(template_name='pages/cooperatives.html'),name="cooperatives"),
     url(r'^state.geojson$', GeoJSONLayerView.as_view(model=State), name='state'),
     url(r'^county.geojson$', GeoJSONLayerView.as_view(model=County), name='county'),
     # Uncomment the next line to enable the admin:

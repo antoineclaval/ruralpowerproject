@@ -3,6 +3,9 @@
 *.pyc
 __pycache__
 
+#ugly dev notes
+personalNotes
+
 # Logs
 *.log
 pip-log.txt
